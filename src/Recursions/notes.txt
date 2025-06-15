@@ -1,0 +1,75 @@
+Recursion is a function is calling another function.
+
+When a function is stayed in the stack memory it means that he still in progress
+
+When a function complete his execution then it is removed from the stack memory and the flow of program is restored to
+where that function has called.
+
+[ public class Numbers {
+      public static void main(String[] args) {
+          //write a function the takes in a number and prints it
+          //print first 5 numbers: 1 2 3 4 5
+          print(1);
+      }
+      static void print(int n){
+          System.out.println(n);
+          print1(2);
+      }
+      static void print1(int n){
+          System.out.println(n);
+          print2(3);
+      }
+      static void print2(int n){
+          System.out.println(n);
+          print3(4);
+      }
+      static void print3(int n){
+          System.out.println(n);
+          print4(5);
+      }
+      static void print4(int n){
+          System.out.println(n);
+      }
+  }
+] When the program start executing main() is the first function who is called in the stack memory, the main function
+include print() function. For the execution of print() function it will call inside the stack memory above than the
+main() function. During the execution of print() function when the function print1() inside it encountered then same
+like print() function it will also call inside stack memory above the print() function and then print1() will execute.
+This process will get continued until print4() function has been called because it doesn't contain any other function in
+its functionality.
+After execution of print4() function it will get pop-up from the stack-memory, as print4() has called by
+print3() hence after this operation print3() executed completely, and it will also get pop-up from the stack memory.
+This process will continue until the execution of print() function inside main() function and at this stage only main()
+has been left in the stack memory. After execution of main() function it will also get pop-up from the stack memory and
+the memory used by this stack memory becomes free to use for further operation.
+This example shows how function call works.
+
+[    public class numberRecursionExample {
+         public static void main(String[] args) {
+             print(1);
+         }
+     //    Base condition in Recursion: Condition where our recursion will stop from making new calls.
+         static void print(int n){
+             if(n==5){
+                 System.out.println(n);
+                 return;
+             }
+             System.out.println(n);
+             print(n + 1);
+         }
+     }
+ ] here we use same function calling itself to print numbers from 1 to 5 with a base condition. The call from function
+ itself is different in each iteration. Every time the function called itself, there is a separate memory allocated for
+every new function call hence we can say that print() function is repeatedly called in the stack memory each time with
+different parameter, and print() function will call itself again and again i.e., a base condition is associated with
+each recursion call so that it couldn't exceed it's calling range.
+[As many times as you call a function it will take separate memory to perform each function execution.]
+
+In case of no base condition is specified in a recursive function after a certain level of memory usage the call stack
+will get out of memory and exception error encounter the flow of program the will generate famous "Stack Overflow" error.
+
+Why do we need Recursion?
+It helps us in solving bigger/complex problems in a simple way.
+You can convert recursion solutions into iteration or vice versa.
+Space complexity is not constant because of recursive calls.
+It helps us in breaking down bigger problems into smaller problems.

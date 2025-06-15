@@ -1,0 +1,84 @@
+1) -> If there is a class which can able to use the properties of his parent class then it can use his properties.
+
+2) -> A child class can use his parent class property by using [extends parent_class_name] during their declaration.
+
+3) -> Whenever you call constructor for creating objects you have to initialize his parent class variable also otherwise
+ you can't use those property as they are just an instance of a class.
+
+4) -> We can create multiple constructors for a single class, and can call them based on their specific parameters.
+
+5) -> Here we derive a child class from (box) class which have its own specific property (weight) and using variables
+of his parent class
+ [
+     public class box {
+          double h;
+          double l;
+          double w;
+          box(double h, double l, double w) {
+                  this.h = h;
+                  this.l = l;
+                  this.w = w;
+     }}
+     public class box_weight extends box {
+     double weight;
+     public  box_weight(double weight){
+            this.weight = -1;
+        }
+     public box_weight(double h, double l, double w, double weight) {
+        super(h, l, w);//what is this?
+     // this keyword is calling the parent class constructor used to initialize values present in parent class.
+        this.weight = weight;  }
+ ]
+
+6) -> We can only access properties of parent class which is above in the hierarchy of declaration i.e. we can't access
+the weight property here [  box box1 = new box(7);  System.out.println(box1.weight);  ] the box1.weight will throw an
+error.
+
+7) -> Its the type of the reference variable that determines accessible parameters for an object and not the constructor
+[ box container = new box_weight(); System.out.println(container.weight); ] here the object is of box class reference
+type but the constructor is of box_weight class hence we can pass box_weight accessible parameters but only those
+parameter can be used which are part of box class.
+
+8) -> There are many variables in both parent and child classes you are given access to variables that are in the ref
+type i.e box_weight, hence you should have access to weight variable , this also means, that the ones you are trying to
+access it should be initialised e.g [  box_weight box5 = new box(12, 3, 4); ] this block will through an error as yes we
+can declare box5 of type box_weight class but we can't call his weight variable via box constructor as the box doesn't
+have any idea about the weight variable which in initialized in the box_weight class.
+
+9) -> The super keyword refers to superclass (parent) objects. It is used to call superclass methods, and to access the
+superclass constructors. The most common use of the super keyword is to eliminate the confusion between superclass and
+subclasses that have methods with the same name.
+
+10) -> Anything which is declared as private can be used in that particular class where it declared only, we can't
+access it at any other place by calling his parent class.
+
+11) -> Types of Inheritance:
+a) Single Inheritance: One class extends the another class.
+b) Multi-level Inheritance:Child class works as a parent class for the classes which has been declared using his name
+with extend keyword e.g. [
+  public class box {}
+public class box_weight extends box {}
+public class box_price extends box_weight {}
+  ]
+c) Multiple Inheritance: One class extending more than 1 class. Java doesn't support multiple inheritance because let us
+suppose a class name C which is a extended version of classes A and B ,now if both the parent class have a variable say
+"rank" then if A have (rank= 5) whereas B have (rank=1) then class C will get confuse and can't take any action i.e
+java does not support multiple inheritance.
+d) Hierarchical Inheritance: One class is inherit many classes.
+e) Hybrid Inheritance: Combination of single and multiple inheritance, not applicable in Java( checkout interfaces
+lecture).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

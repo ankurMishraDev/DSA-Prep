@@ -1,0 +1,56 @@
+-> The abstract Method is used for creating blueprints for classes or interfaces. Here methods are defined but these
+methods don’t provide the implementation. Abstract Methods can only be implemented using subclasses or classes that
+implement the interfaces.
+
+-> Java abstract class is a class that can not be initiated by itself, it needs to be subclassed by another class to use
+its properties. An abstract class is declared using the “abstract” keyword in its class definition.
+
+-> Any class that contain one or more abstract method/functions must also be declared as abstract.
+
+-> [abstract void name (String name);] this shows how an abstract variable is declared in the parent_class so that its
+child class have to override the parent class method in order to use them for their own purpose and results.
+
+-> [ public abstract class parent {
+    abstract  void career();
+    abstract void  partner ();  }
+  ] class of name "parent" is declared as abstract because it contain abstract variables
+   [  public  class son extends parent {
+         @Override
+         void career() {
+             System.out.println("I am going to be a professional footballer"); }
+         @Override
+         void partner() {
+             System.out.println("I love playing football" ); }}
+   ] here "son" is a child of parent who is using instance of career and partner variable and creating their object
+for his own usage by overriding it.
+
+-> We can't create a object of parent class as it doesn't have any object hence it will call @Override method for his
+career and partner abstract variables
+[
+      parent dad = new parent(34) {
+     @Override
+      void career() {
+     @Override
+      void partner() {} };
+]
+
+-> We know that overriding is not possible is static methods hence we can't use abstract class in static methods but
+static methods can be used within abstract classes.
+
+-> In Java, the following some important observations about abstract classes are as follows:
+An instance of an abstract class can not be created.
+Constructors are allowed.
+We can have an abstract class without any abstract method.
+There can be a final method in abstract class but any abstract method in class(abstract class) can not be declared as
+final  or in simpler terms final method can not be abstract itself as it will yield an error: “Illegal combination of
+modifiers: abstract and final”.
+We can define static methods in an abstract class.
+We can use the abstract keyword for declaring top-level classes (Outer class) as well as inner classes as abstract.
+If a class contains at least one abstract method then compulsory should declare a class as abstract.
+If the Child class is unable to provide implementation to all abstract methods of the Parent class then we should
+declare that Child class as abstract so that the next level Child class should provide implementation to the remaining
+abstract method.
+
+
+
+

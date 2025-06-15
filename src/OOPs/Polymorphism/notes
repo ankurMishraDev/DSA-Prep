@@ -1,0 +1,88 @@
+1) -> Polymorphism means many ways to represent many entities.
+
+2) -> Types of Polymorphism:
+a)Compile time/Static Polymorphism: Achieved via method Overloading.
+Overloading means same name but with different types, arguments, return types. e.g multiple constructors.
+[
+     public class box {
+      double h;
+      double l;
+      double w; }
+      box() { //same name but with no parameter
+          this.h = -1;
+          this.l = -1;
+          this.w = -1;   }
+      box(double side) {   // same name but with a parameter
+          this.h = side;
+          this.l = side;
+          this.w = side; }
+      box(double h, double l, double w) {  // same name but with different 3 parameters
+          this.h = h;
+          this.l = l;
+          this.w = w;  }
+      box(box old) {  // same name but with a constructor parameter
+          this.h = old.h;
+          this.l = old.l;
+          this.w = old.w;  }
+          }  public class Main {
+                public static void main(String[] args) {
+              box box1 = new box(7);
+              System.out.println(box1.h + " " + box1.l + " " + box1.w);
+              box box2 = new box(7,34,34);
+              System.out.println(box2.h + " " + box2.l + " " + box2.w);
+              box box3 = new box(box2);
+              System.out.println(box3.l + box3.w + box3.l);
+]
+ By default java determine which constructor of the same class to call based on the arguments, etc, here
+ different parameters produce different object of same class that is called as Compile time or static polymorphism.
+b)Runtime/Dynamic Polymorphism: Achieved by method Overriding.
+Overriding is called a annotation it will check a particular method/function that is it used again and again or not.
+e.g [ public class shapes {
+          void area(){
+              System.out.println("I am in shapes");
+          }
+
+      }public class circle extends shapes{
+          @Override // called an annotation
+          void area(){ //this method/function will run when object of circle is created hence it is overriding the
+          parent class
+              System.out.println("Area is pie *r *r");
+          }}
+          public class triangle extends shapes{
+           @Override
+              void area(){
+                  System.out.println("Area is 1/2 * b * h");
+              }
+          }
+          public class square extends shapes{
+          @Override
+              void area() {
+                  System.out.println("Area is sum of all sides");
+              }
+          }
+      ]
+
+3) -> What does overriding do? :
+lets take a scenario  [shapes obj = new circle();]  here obj is going to have a instance of shapesClass like which
+properties you can assign to obj but the value is actually of circleClass like if we print the value of obj.area it will
+print the area of circle not the shapes.
+
+4) -> [shapes obj = new circle();] in this situation the circle Class is known as Upcasting and entire block represents
+how overriding works.
+
+5) -> How Java determines which particular method/function to call ?
+Java does this with the help of "Dynamic method dispatch" it is just an call which is transferred to a overriding method
+rather than a particular class or instance during runtime and that's why it is called "Dynamic Polymorphism".
+
+6) -> [ public class shapes {
+        final void area(){
+               System.out.println("I am in shapes");
+           }
+] here the final keyword is used for Early binding. Early binding means declaring that a particular method/function can
+not be a part of any other object or anything , the final keyword prevent the overriding of void area() method/function.
+
+7) -> Static method/function can be inherit but can't be override by any class or object.As we can understand it like
+overriding is depend on objects whereas static doesn't depend on object hence, static doesn't depend on overriding.
+
+
+

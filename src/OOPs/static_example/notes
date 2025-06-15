@@ -1,0 +1,28 @@
+1) -> static variables are independent of object . A variable who is declared as static during declaration works
+ same for his every sub-child.
+
+2) -> Don't access, modify, declare, change static variable via object name it will work butstill don't do it .Use it
+ via class name.
+
+3) -> You can declare variables or methods/functions as static e.g. public static void main().
+
+4) -> Static means you can make method/function or variables and use them without creating the objects of that class.
+
+5) -> We can run main function inside a class because it declared as along with static, hence we don't have to create a
+object to access main function.
+
+6) -> We know that something which is not static, belongs to an object. We can't access any object, property, variable
+inside a static function which is not declared as static.
+
+7) -> You can't access non static stuff without referencing their instances in a static context.
+
+8) -> Static block will only run once, when the first object is created i.e. when the class is loaded for the first time.
+
+9) -> Outside classes can not be declared as static.
+
+10) -> If a class is declared inside another class then it becomes dependent on it, hence we can't access it inside any
+static method/function but when a class isn't declared within any another class then it can be access within static
+ method/function as now it doesn't depend on any other class or object.
+
+11) -> We know object are declare during runtime where as static variable/method/function/class are declared during
+compile time.

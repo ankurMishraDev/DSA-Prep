@@ -1,0 +1,154 @@
+-> In a class when a variable or any unit is declared as private then it can't be accessible for any other class or file
+directly.
+
+-> We can have all the four access modifiers for class member variables and methods. However, member access modifier
+rules get applied after the class level access rules. For example, if a class is having default access then it will not
+be visible in other packages and hence methods and variables of the class will also be not visible. We will look into
+each of them separately and then we will show the java access modifiers usage with a simple program.
+
+-> If a variable is declared as private in class then we can access it via getters and setters method/function.
+
+-> Getters and Setters are worked like a constructors where getter hold accessing power of variable and setter can
+modify it's value according to our need.
+
+-> When variables are declared as public in class then they can be accessible across their every package or folder, but
+when nothing is mentioned than the variable can be accessible only for the same package classes but not for the other
+folder packages.
+
+-> Protected modifier are used to declare class or variable accessible for same class,package subclass of same pkg and
+subclass of diff pkg.
+
+-> Modifiers and their Accessibility :
+a) "public" Modifier :If a class member is “public” then it can be accessed from anywhere. The member variable or
+method is accessed globally. This is the simplest way to provide access to class members. However, we should take care
+of using this keyword with class variables otherwise anybody can change the values. Usually, class variables are kept as
+private and getter-setter methods are provided to work with them.
+ Applicable in :
+> Class file
+> Package file
+> Subclass (same pkg)
+> Subclass (diff pkg)
+> Everywhere (diff pkg & not subclass)
+b) "protected" Modifier :If a class member is “private” then it will be accessible only inside the same class. This is
+the most restricted access and the class member will not be visible to the outer world. Usually, we keep class
+variables as private and methods that are intended to be used only inside the class as private.
+Applicable in :
+> Class file
+> Package file
+> Subclass (same pkg)
+> Subclass (diff pkg)
+c) No Modifier :If a class member doesn’t have any access modifier specified, then it’s treated with default access. The
+access rules are similar to classes and the class member with default access will be accessible to the classes in the
+same package only. This access is more restricted than public and protected but less restricted than private.
+(Least Accessible) private < default < protected < public (Most Accessible) The below table summarise above access
+modifiers with respect to different classes in the same package or other packages and subclasses.
+Applicable in :
+> Class file
+> Package file
+> Subclass (same pkg)
+d) "private" Modifier :If class member is “protected” then it will be accessible only to the classes in the same
+package and to the subclasses. This modifier is less restricted from private but more restricted from public access.
+Usually, we use this keyword to make sure the class variables are accessible only to the subclasses.
+Applicable in :
+> Class file
+
+-> In different packages with Protected variable or class can only be accessible via creating their subclass.
+
+->Object class is present in java.lang package. Every class in Java is directly or indirectly derived from the Object
+class. If a class does not extend any other class then it is a direct child class of Object and if extends another
+class then it is indirectly derived. Therefore the Object class methods are available to all Java classes. Hence Object
+class acts as a root of the inheritance hierarchy in any Java Program.
+
+->The Object class provides multiple methods which are as follows:
+tostring() method
+hashCode() method
+equals(Object obj) method
+finalize() method
+getClass() method
+clone() method
+wait(), notify() notifyAll() methods
+
+-> toString() method
+The toString() provides a String representation of an object and is used to convert an object to a String. The default
+toString() method for class Object returns a string consisting of the name of the class of which the object is an
+instance, the at-sign character `@’, and the unsigned hexadecimal representation of the hash code of the object.
+[ @Override
+      public String toString()  {  return super.toString(); }
+      ]
+[ Note: Whenever we try to print any Object reference, then internally toString() method is called. ]
+
+-> hashCode() method
+For every object, JVM generates a unique number which is a hashcode. It returns distinct integers for distinct objects.
+A common misconception about this method is that the hashCode() method returns the address of the object, which is not
+correct. It converts the internal address of the object to an integer by using an algorithm. The hashCode() method is
+native because in Java it is impossible to find the address of an object, so it uses native languages like C/C++ to
+find the address of the object.
+It returns a hash value that is used to search objects in a collection. JVM(Java Virtual Machine) uses the hashcode
+method while saving objects into hashing-related data structures like HashSet, HashMap, Hashtable, etc. The main
+advantage of saving objects based on hash code is that searching becomes easy.
+[  @Override
+      public int hashCode() {//a unique representation of an object via a number.
+          return num;
+      }  ]
+[Note: Override of hashCode() method needs to be done such that for every object we generate a unique number. For
+example, for a Student class, we can return the roll no. of a student from the hashCode() method as it is unique.  ]
+
+-> equals(Object obj) method
+It compares the given object to “this” object (the object on which the method is called). It gives a generic way to
+compare objects for equality. It is recommended to override the equals(Object obj) method to get our own equality
+condition on Objects.
+[  @Override
+      public boolean equals(Object obj) {
+          return this.num == ((ObjectsDemo) obj).num; }
+    ]
+
+-> getClass() method
+It returns the class object of “this” object and is used to get the actual runtime class of the object. It can also
+be used to get metadata of this class. The returned Class object is the object that is locked by static synchronized
+methods of the represented class. As it is final so we don’t override it.
+[ class Test {
+      public static void main(String[] args) {
+          Object obj = new String("GeeksForGeeks");
+          Class c = obj.getClass();
+          System.out.println("Class of Object obj is : "
+                  + c.getName());
+      }}
+  ]
+[Note: After loading a .class file, JVM will create an object of the type java.lang.Class in the Heap area. We can use
+this class object to get Class level information. It is widely used in Reflection ]
+
+-> finalize() method
+This method is called just before an object is garbage collected. It is called the Garbage Collector on an object when
+the garbage collector determines that there are no more references to the object. We should override finalize() method
+to dispose of system resources, perform clean-up activities and minimize memory leaks. For example, before destroying
+the Servlet objects web container, always called finalize method to perform clean-up activities of the session.
+[ @Override
+      public void finalize() throws Throwable {
+          System.out.println("finalize method called");
+      }
+  ]
+[ Note: The finalize method is called just once on an object even though that object is eligible for garbage collection
+multiple times.]
+
+-> The java instanceof operator is used to test whether the object is an instance of the specified type (class or
+subclass or interface).
+The instanceof in java is also known as type comparison operator because it compares the instance with type. It returns
+either true or false. If we apply the instanceof operator with any variable that has null value, it returns false.
+[
+class Simple1{
+ public static void main(String args[]){
+ Simple1 s=new Simple1();
+ System.out.println(s instanceof Simple1);//true
+ }
+}
+OUTPUT: true
+]
+
+
+
+
+
+
+
+
+

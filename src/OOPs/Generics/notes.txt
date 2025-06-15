@@ -1,0 +1,41 @@
+Generics means parameterized types. The idea is to allow type (Integer, String, … etc., and user-defined types) to be a
+parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes that work with different
+data types.
+
+Why Generics?: The Object is the superclass of all other classes, and Object reference can refer to any object. These
+features lack type safety. Generics add that type of safety feature.
+
+Generic Method: Generic Java method takes a parameter and returns some value after performing a task. It is exactly like
+a normal function, however,a generic method has type parameters that are cited by actual type. This allows the generic
+method to be used in a more general way. The compiler takes care of the type of safety which enables programmers to code
+easily since they do not have to perform long, individual type castings.
+
+Generics are very useful while creating classes based on parameters. With parameter, we can provide safety to our
+class as it defines which kind of data type can be used in a class. e.g
+[
+ public class customGenArrayList < T >{
+    private Object []data;
+    private  static int DEFAULT_SIZE = 5;
+    private int size = 0; // also working as index value
+
+    public customGenArrayList() {
+        this.data = new Object[DEFAULT_SIZE];
+    }
+] here the "<T>" in class is generic parameter which is initialized during object declaration, this parameter can be of
+any variable type.
+
+Wild cards are used to bound the restriction for selecting a particular parameter for Generic object. e.g.
+[
+    public class customGenArrayList < T extends Number > ]here the "T" generic should be declared as Number or its
+subclass variable , other variable type can't be used.
+
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are
+similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+e.g [ ArrayList<Integer> arr = new ArrayList<>();
+              for (int i = 0; i < 5; i++) {
+                  arr.add(i + 1);
+              }
+              Consumer<Integer> fact = (item) -> System.out.println(item * 3);
+              arr.forEach(fact);
+    ] here Consumer<> interface is used to store a lambda expression in variable. for each loop is using where for every
+element of array the lambda function run this block [ System.out.println(item * 3); ].

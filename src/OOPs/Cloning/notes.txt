@@ -1,0 +1,23 @@
+Clone is actually a method in parent class that can be used to make its copies.
+
+If you want to make a class or object cloneable than you have to specify it at class declaration. e.g.
+[ public class human implements Cloneable ].
+
+The java.lang.Cloneable interface must be implemented by the class whose object clone we want to create. If we don't
+implement Cloneable interface, clone() method generates CloneNotSupportedException.
+
+The clone() method is defined in the Object class. Syntax of the clone() method is as follows:
+[ protected Object clone() throws CloneNotSupportedException ].
+
+Why use clone() method ?
+The clone() method saves the extra processing task for creating the exact copy of an object. If we perform it by using
+the new keyword, it will take a lot of processing time to be performed that is why we use object cloning.
+
+Shallow copy is a reference copy creates a copy of a reference variable pointing to an object. For example, if we have
+a Bike object,with a myBike variable pointing to it and we make a reference copy, we will now have two myBike variables
+, but still one object.
+An object copy creates a copy of the object itself. So, if we again copied our byke object, we would create a copy of
+the object itself, as well as a second reference variable referencing that copied object.
+
+In shallow copy the primitive data type variable exactly copied in a clone object but the reference variable is same for
+both original and clone of the object so a change from one object is reflect in both object.

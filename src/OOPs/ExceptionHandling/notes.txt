@@ -1,0 +1,64 @@
+When an error occurs, Java will normally stop and generate an error message. The technical term for this is: Java will
+throw an exception (throw an error).
+
+The "try" keyword allows you to define a block of code to be tested for errors while it is being executed.
+
+The "catch" keyword allows you to define a block of code to be executed, if an error occurs in the try block.
+
+The try and catch keywords come in pairs: e.g. [
+try {
+  //  Block of code to try
+}
+catch(Exception e) {
+  //  Block of code to handle errors
+}  ]
+
+If an error occurs, we can use try...catch to catch the error and execute some code to handle it: e.g.
+[
+public class Main {
+  public static void main(String[ ] args) {
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");}}}
+]
+
+The "finally" keyword lets you execute code, after try...catch, regardless of the result: e.g.
+ [
+public class Main {
+  public static void main(String[] args) {
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The 'try catch' is finished.");}}}
+]
+
+The "throw" keyword allows you to create a custom error or an exception.
+The "throw" keyword is used together with an exception type. There are many exception types available in Java:
+ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc.
+e.g. [
+  static int divide(int a, int b) throws ArithmeticException{
+              if (b == 0 ){
+                  throw new ArithmeticException("please do not divide by zero");
+              }
+              return a/b;}
+] here we created a custom error message in case if the value of b is zero.
+
+ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException are subclasses of
+Exception class, the more restricted exception class should be declared above the less restricted one. e.g.
+[
+ try {
+            divide(a,b);
+        }catch (ArithmeticException e){
+            System.out.println(e.getMessage());
+        }catch (Exception e ){
+            System.out.println("normal exception");
+        }
+        finally {
+            System.out.println("this will always execute");
+        }
+] "ArithmeticException" is more restricted exception type the "Exception" hence it is declared after it.
