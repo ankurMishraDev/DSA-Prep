@@ -38,5 +38,16 @@ public class Initial {
 //        dllList.display();
 //        System.out.println("Removed element " + dllList.deleteAtLast());
 //        dllList.display();
+
+        //Circular Linked List
+        CLL cllList = new CLL();
+        cllList.add(23);
+        cllList.add(4);
+        cllList.add(7);
+        cllList.add(17);
+        cllList.add(9);
+        cllList.display();
+        cllList.delete(7);
+        cllList.display();
     }
 }
