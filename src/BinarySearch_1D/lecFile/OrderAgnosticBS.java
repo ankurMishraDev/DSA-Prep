@@ -1,6 +1,5 @@
-package BinarySearch_1D;
+package BinarySearch_1D.lecFile;
 
-import java.nio.ReadOnlyBufferException;
 import java.util.Scanner;
 
 public class OrderAgnosticBS {

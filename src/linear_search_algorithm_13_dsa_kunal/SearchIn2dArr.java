@@ -22,7 +22,10 @@ public class SearchIn2dArr {
         if (n == 0) {
             break;
         }
-    }}
+    }
+
+
+    }
     static int[] search(int[][] arr  , int target){
 
         for (int row = 0; row < arr.length; row++){

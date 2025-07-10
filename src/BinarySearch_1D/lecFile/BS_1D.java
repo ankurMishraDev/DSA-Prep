@@ -1,4 +1,4 @@
-package BinarySearch_1D;
+package BinarySearch_1D.lecFile;
 import java.util.Scanner;
 
 public class BS_1D {

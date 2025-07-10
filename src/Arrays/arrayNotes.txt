@@ -1,0 +1,34 @@
+-> "int [] arr= new int[3]" this line means "arr" variable of type int is pointing towards int type array object in the heap
+memory.
+
+-> array can also be defined as "int[] arr= {23,4,53,12,6,7}"
+
+-> "int[] arr" declaration of array, "arr" is getting defined in the stack this operation is executed at compile time and
+"arr = new int[5]" initialization of array,  object is being created in the memory, the operation is executed at runtime
+(dynamic memory allocation).
+
+-> in c++ the array is stored in continuous block of memory like cell after cell but in java there is no concept of pointers
+in java, JVM handles the storing and accessing of array elements as here the array objects are stored in heap.
+Heap objects aren't continuous. Hence array objects may not be continuous in java, it depends on JVM.
+
+-> "new" keyword is used to create new object in heap memory.
+
+-> "int [] arr = new int[4]" this line will create an array of 4 elements with default value of as "0".
+"String [] str= new String[5]" this will create an array of 5 elements with default value of null.
+
+-> in java, primitive(int, char, boolean) data types are stored in stack memory and non-primitive(String, Hashmap) are stored in heap memory
+
+-> "null" can be only assigned to the non-primitive data structures, it is fixed literal that is assigned to the un-reference
+variables.
+
+-> strings and arrays are mutable in java which means we can make changes in the actual object in heap memory.
+
+-> in java, arguments are passed by call by reference
+
+->"int[] [] arr = new int[4][]" in the declaration of 2d array it is mandatory to provide the no. of rows in the array,
+because w.k.t multidimensional arrays are just array of arrays hence at each element of array there is a another array
+that can be of different size then the other elements of the array, i.e. it is not mandatory to specify the column size
+during the initialization.
+
+->"ArrayList<Integer> list = new ArrayList<>();" here "<Integer>" specifies the type of value to get stored in the list,
+and we have to provide the wrapper class of the data type we want as we can't use primitive data type.

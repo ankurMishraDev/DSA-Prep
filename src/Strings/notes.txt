@@ -21,7 +21,7 @@ initialized with different variable and objects.
 
 Immutability is very important for String data types as if more than one variable initialized with same object then they
 actually pointing towards a same object and if one variable modified the object value then it will also be changed for
-the other variable. Hence immutability act as a security function for String classes
+the other variable. Hence, immutability act as a security function for String classes
 
 String objects are immutable, they can't be changed. If we want to modify a variables value then we have to make a new
 object inside java pool so that it can be used by the reference variable.
