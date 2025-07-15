@@ -1,4 +1,4 @@
-package BinarySearch_1D.assignmentQues;
+package BinarySearch.assignmentQues;
 //link: https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 //find the ceiling of a given number
 //ceiling = smallest element in array > or == target

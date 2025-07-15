@@ -1,4 +1,4 @@
-package BinarySearch_1D.assignmentQues;
+package BinarySearch.assignmentQues;
 //link: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 public class SearchInRotatedArray {
     public static void main(String[] args) {

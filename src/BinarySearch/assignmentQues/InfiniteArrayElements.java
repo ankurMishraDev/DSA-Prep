@@ -1,4 +1,4 @@
-package BinarySearch_1D.assignmentQues;
+package BinarySearch.assignmentQues;
 
 import java.util.Scanner;
 

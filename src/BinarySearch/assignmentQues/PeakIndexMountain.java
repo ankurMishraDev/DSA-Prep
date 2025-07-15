@@ -1,4 +1,4 @@
-package BinarySearch_1D.assignmentQues;
+package BinarySearch.assignmentQues;
 
 // link: https://leetcode.com/problems/peak-index-in-a-mountain-array/
 

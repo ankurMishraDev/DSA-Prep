@@ -1,3 +1,5 @@
+package OOPs;
+
 import java.util.Scanner;
 
 public class problem {

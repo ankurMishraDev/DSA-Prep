@@ -1,6 +1,5 @@
-package BinarySearch_1D.assignmentQues;
+package BinarySearch.assignmentQues;
 
-import javax.swing.*;
 // link: https://leetcode.com/problems/find-in-mountain-array/description/
 public class FindMountainArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package BinarySearch_1D.assignmentQues;
+package BinarySearch.assignmentQues;
 //link https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 public class FirstLastPosition {
     public static void main(String[] args) {
