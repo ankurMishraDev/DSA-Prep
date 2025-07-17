@@ -54,3 +54,4 @@ Repeat this process until every element is in its correct place.
    Number of writes: minimized, each element is written only once to its correct position.
    Time complexity: O(n)
    Space complexity: O(1)
+-> When no. are given in range from 1 to n where n is the no. of elements, first use cyclic sort to sort the data.

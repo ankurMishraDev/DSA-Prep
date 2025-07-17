@@ -6,8 +6,10 @@ public class CyclicSort {
     public static void main(String[] args) {
         int [] arr = {2,53,6,32,54,745,23,21,73};
         int [] arr2 ={1,7,5,4,6,2,3,8,9,11,14,12,10,13};
-        cyclicSort(arr2);
-        System.out.println(Arrays.toString(arr2));
+        int [] arr3 = {0,1};
+        int [] arr4={4,3,2,7,8,2,3,1};
+        cyclicSort(arr4);
+        System.out.println(Arrays.toString(arr4));
     }
     static void cyclicSort(int[] arr){
         int i = 0;
