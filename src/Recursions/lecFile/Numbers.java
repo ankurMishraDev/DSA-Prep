@@ -1,4 +1,4 @@
-package Recursions;
+package Recursions.lecFile;
 
 public class Numbers {
     public static void main(String[] args) {

@@ -36,7 +36,7 @@ include print() function. For the execution of print() function it will call ins
 main() function. During the execution of print() function when the function print1() inside it encountered then same
 like print() function it will also call inside stack memory above the print() function and then print1() will execute.
 This process will get continued until print4() function has been called because it doesn't contain any other function in
-its functionality.
+its scope.
 After execution of print4() function it will get pop-up from the stack-memory, as print4() has called by
 print3() hence after this operation print3() executed completely, and it will also get pop-up from the stack memory.
 This process will continue until the execution of print() function inside main() function and at this stage only main()
@@ -62,14 +62,14 @@ This example shows how function call works.
  itself is different in each iteration. Every time the function called itself, there is a separate memory allocated for
 every new function call hence we can say that print() function is repeatedly called in the stack memory each time with
 different parameter, and print() function will call itself again and again i.e., a base condition is associated with
-each recursion call so that it couldn't exceed it's calling range.
-[As many times as you call a function it will take separate memory to perform each function execution.]
+each recursion call so that it couldn't exceed its calling range.
+[As many times as you call a function, it will take separate memory to perform each function execution.]
 
 In case of no base condition is specified in a recursive function after a certain level of memory usage the call stack
-will get out of memory and exception error encounter the flow of program the will generate famous "Stack Overflow" error.
+will get out of memory and exception error encounter the flow of program will generate famous "Stack Overflow" error.
 
 Why do we need Recursion?
-It helps us in solving bigger/complex problems in a simple way.
+It helps us solve bigger/complex problems in a simple way.
 You can convert recursion solutions into iteration or vice versa.
 Space complexity is not constant because of recursive calls.
 It helps us in breaking down bigger problems into smaller problems.

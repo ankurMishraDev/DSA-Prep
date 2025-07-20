@@ -1,9 +1,8 @@
-Everything that starts with a capital letter in java in a class.
+Everything that starts with a capital letter in java is a class.
 
-For String data type variables java has a separate memory location inside java heap memory it is called as
-Java Pool
+For String data type variables, java has a separate memory allocation inside java heap memory it is called as Java Pool.
 
-The java pool allocate memory to the string data type variables.
+The java pool allocates memory to the string data type variables.
 
 Whenever a String variable is initialized with a value . The value is first check inside the java pool for it's
 availability , if a similar value is already present in the java pool then , NO new value is stored in java pool and the
@@ -13,47 +12,46 @@ e.g.[  String first = "ankur"
 String second = "ankur"   ]
 in this example two different variable (first) and (second) of String type initialized with same value as "ankur" , but
 in java pool the value "ankur" get allocated only once during the (first) initialization, when the variable (second)
-also get initialized with same value then java pool provide the reference address of value to the (second) variable.
-Hence both the variable can points towards the same value inside the java heap memory.
+also gets initialized with the same value then java pool provides the reference address of value to the (second) variable.
+Hence, both the variables can point towards the same value inside the java heap memory.
 
 The main function of java pool is to prevent memory allocation of the same value again and again, which has been
-initialized with different variable and objects.
+initialized with different variables and objects.
 
-Immutability is very important for String data types as if more than one variable initialized with same object then they
-actually pointing towards a same object and if one variable modified the object value then it will also be changed for
-the other variable. Hence, immutability act as a security function for String classes
+Immutability is very important for String data types as if more than one variable initialized with same object then they're
+actually pointing towards the same object, and if one variable modified the object value, then it will also be changed for
+the other variable. Hence, immutability acts as a security function for String classes
 
 String objects are immutable, they can't be changed. If we want to modify a variables value then we have to make a new
 object inside java pool so that it can be used by the reference variable.
 e.g. [ String name = "ankur";
 name = "rahul"; ]
-in this example the value of (name) variable is changed from "ankur" to "rahul" but actually the value "ankur" does not
-modified from "ankur" to "rahul", the (name) variable actually points towards different value in memory named "rahul".
+in this example, the value of (name) variable is changed from "ankur" to "rahul" but actually the value "ankur" does not
+modify from "ankur" to "rahul", the (name) variable actually points towards different value in memory named "rahul".
 
-e.g. [ String name = "ankur"; name = "rahul"; ] here as the (name) variable now point towards "rahul" and no other
-variable is pointing towards the "ankur" value hence this value get destroyed by the garbage collector and free the
+e.g. [ String name = "ankur"; name = "rahul"; ] here as the (name) variable now points towards "rahul" and no other
+variable is pointing towards the "ankur" value, hence this value gets destroyed by the garbage collector and frees the
 memory space for further uses.
 
-Comparison operator (==) can be used to check whether two different objects having same value are pointing towards the
+Comparison operator (==) can be used to check whether two different objects having the same value are pointing towards the
 same value or not. e.g [  String a = "ankur";
                                  String b = "ankur";
-
-                         //        comparison of both the strings
+                         //      comparison of both the strings
                                  System.out.println( a == b);   ]
-here the output is came out as "true", hence it's proved that both the variable are pointing towards the same value in
+here the output is come out as "true", hence it's proved that both the variables are pointing towards the same value in
 the java pool.
 
-How to create different object of same value?
+How to create different objects of the same value?
 [ String a = new String("ankur");
 String b = new String("ankur");
 //comparison of both the strings
-System.out.println( a == b);  ] here the output is came out as "false", hence it shows that both variable (a) and (b)
-are not pointing towards same value.
-The (new) keyword is used to create a separate object of same value to store in the memory. String Objects declared with
-(new) keyword are stored in the heap memory in place of java pool.
+System.out.println( a == b);  ] here the output is come out as "false", hence it shows that both variable (a) and (b)
+are not pointing towards the same value.
+The (new) keyword is used to create a separate object of the same value to store in the memory.
+"String Objects declared with (new) keyword are stored in the heap memory in place of java pool."
 
 ArrayList is a class which is used to make specific objects that shows array properties. We use Arraylist cause it
-provide wide range of functions that can be used for specific purposes. We can access these functions with help of (.)
+ provide a wide range of functions that can be used for specific purposes. We can access these functions with help of (.)
 keyword. e.g. [
 public class Main{
 public static void main(String [] args){
@@ -109,8 +107,8 @@ Operator (+) is the only operator in java that has been used for String operatio
 ]
 
 StringBuilder is a data type that can be used to overcome limitations of String data type.
-Since Strings are immutable so every time we have to change the value of object then we have to create a separate new
-value for the object but in case of StringBuilder it provide wide range of functionality for specific purposes.
+Since Strings are immutable, so every time we have to change the value of object, then we have to create a separate new
+value for the object, but in the case of StringBuilder, it provides a wide range of functionality for specific purposes.
 [
 public class SB {
     public static void main(String[] args) {

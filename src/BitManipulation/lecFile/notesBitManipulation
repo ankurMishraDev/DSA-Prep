@@ -1,0 +1,56 @@
+BITWISE OPERATORS
+1) AND (&) operator
+  a | b | a&b
+  0 | 0 |  0
+  0 | 1 |  0
+  1 | 0 |  0
+  1 | 1 |  1
+[Note: When you use & operator along 1 (&1) with any number that digit remains the same]
+
+2) OR (||) operator
+  a | b | a||b
+  0 | 0 |  0
+  0 | 1 |  1
+  1 | 0 |  1
+  1 | 1 |  1
+
+3) XOR (^) operator
+  a | b | a^b
+  0 | 0 |  0
+  0 | 1 |  1
+  1 | 0 |  1
+  1 | 1 |  0
+Observations:
+i) a^1 = ~a
+ii) a^0 = a
+iii) a^a = 0
+
+4) Complement (~) operator
+  if a = 010010
+  then ~a = 101101
+
+5) Left Shift (<<) operator
+ a = 10, a << 1 => a == 20 ,what actually happens is first 10 from decimal is converted into binary form 1010 and
+ then each bit starting to shift from last(right sided) position to left bit by 1 position and as a result binary becomes 10100 which
+ is 20.
+ [Note: a<<b = a2^b (2's power b)]
+
+6) Right Shift (>>) operator
+ shifts the bits of a number to the right by a specified number of positions, effectively dividing the number by a power
+ of two
+ let's take a=21; which is 10101 in Binary Form. Now, if a is right shifted by 1 i.e a = a >> 1 then a will become
+ a=a/(2^1). Thus, a = a/(2^1) = 10 which can be written as 1010.
+ a >> b = a/2^b(2's power b)
+
+[Note: Every no. is calculated in binary form internally]
+
+NUMBER SYSTEMS
+i) Decimal -> 1,2,3,4,5,6,7,8,9,0 base: 10
+ii) Binary -> 0,1 base: 2
+iii) Octal -> 0,1,2,3,4,5,6,7 base: 8
+iv) Hexadecimal -> 0,1,2,3,4,5,6,7,8,A,B,C,D,E,F base: 16
+
+Conversions in number system
+i) Decimal to binary: Keep dividing by base, take reminders write the those reminders in opposite direction
+ii) Binary to decimal: Multiply and sum the power of base with digits.
+
