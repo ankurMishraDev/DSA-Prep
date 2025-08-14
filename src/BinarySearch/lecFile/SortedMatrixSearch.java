@@ -12,9 +12,12 @@ public class SortedMatrixSearch {
                 {31, 35, 37, 38, 39, 42},
                 {231, 237, 354, 1685, 24615, 34561}
         };
+        int[][]matrix2 ={
+                {1},{3}
+        };
         System.out.println("Enter the element you want to search in the array");
         int target = in.nextInt();
-        System.out.println(Arrays.toString(search(matrix, target)));
+        System.out.println(Arrays.toString(search(matrix2, target)));
     }
 
     //    search in the row provided
@@ -40,9 +43,9 @@ public class SortedMatrixSearch {
             return new int[] {-1,-1};
         }
         if (row == 1) {
-            return BS(matrix, 0, 0, col - 1, target);
+            return BS(matrix, 0, 0, col , target);
         }
-//        run till thw two rows are remaining
+//        run till the two rows are remaining
         int rStart = 0;
         int rEnd = row - 1;
         int cMid = col / 2;

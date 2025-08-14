@@ -4,7 +4,7 @@ worst case: 0(logN)
 
 -> To apply binary search, first the data structure should be sorted rather in ascending or descending order.
 
--> For now let us assume that array is our data structure and it is sorted in ascending order so our equation will goes
+-> For now let us assume that array is our data structure, and it is sorted in ascending order, so our equation will goes
 like:-
 i) find the middle element or the array, we can find the middle element by using relation:
 midElement = (firstElement + lastElement)/2 this approach can be used, but it is not an optimal approach as the value
@@ -16,7 +16,7 @@ iii) if midElement == targetElement then return it.
 
 -> Order agnostic binary search here we will make minor changes in the binary search algo based on the sorted ascending/
 descending order:
-i) to find the order in which data has sorted just check array[0]>array[length-1] if it is true then data is sorted in
+i) to find the order in which data has sorted, check array[0]>array[length-1] if it is true, then data is sorted in
 descending order otherwise in ascending order.
 
 

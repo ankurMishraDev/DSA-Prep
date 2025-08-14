@@ -1,4 +1,4 @@
-package linkedList;
+package linkedList.lecFile;
 
 public class CLL {
     private Node head;
@@ -22,6 +22,7 @@ public class CLL {
 
     public void display(){
         Node node = head;
+        System.out.print("HEAD -> ");
         do{
             System.out.print(node.value + " -> ");
             node = node.next;

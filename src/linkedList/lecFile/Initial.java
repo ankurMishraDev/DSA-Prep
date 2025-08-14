@@ -1,9 +1,13 @@
-package linkedList;
+package linkedList.lecFile;
 
 public class Initial {
     public static void main(String[] args) {
           //Singly Linked List
-//        LL list = new LL();
+        LL list = new LL();
+        list.insertRec(3,0);
+        list.insertRec(2,1);
+        list.insertRec(6,2);
+        list.printList();
 //        list.addFirst(12);
 //        list.addLast(23);
 //        list.add(7,1);
@@ -46,8 +50,8 @@ public class Initial {
         cllList.add(7);
         cllList.add(17);
         cllList.add(9);
-        cllList.display();
-        cllList.delete(7);
-        cllList.display();
+//        cllList.display();
+//        cllList.delete(7);
+//        cllList.display();
     }
 }
