@@ -1,4 +1,4 @@
-package Trees;
+package Trees.lecFile;
 
 public class BinarySearchTree {
     public static class Node {

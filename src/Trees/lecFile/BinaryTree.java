@@ -1,4 +1,4 @@
-package Trees;
+package Trees.lecFile;
 
 import java.util.Scanner;
 

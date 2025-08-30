@@ -1,4 +1,4 @@
-package Trees;
+package Trees.lecFile;
 
 public class SegmentTree {
     public static void main(String[] args) {

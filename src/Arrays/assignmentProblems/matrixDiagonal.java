@@ -1,4 +1,4 @@
-package Intro_array_12_dsa_kunal.practise;
+package Arrays.assignmentProblems;
 
 public class matrixDiagonal {
     public static void main(String[] args) {
